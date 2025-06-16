@@ -1,0 +1,174 @@
+.font-color-default{
+    color: #302222 !important;
+}
+
+@media only screen and (max-width: 991px) {
+    .custom_display_mobile{
+        display: none !important;
+    }
+
+    .img_custom_size{
+        width: 100% !important;
+    }
+
+    .landing_bg{
+      background: url(../assets/Landing_bg_mobile.svg) !important;background-size: 100% !important;background-repeat: no-repeat !important;
+    }
+
+   
+}
+
+@media only screen and (min-width: 992px) {
+
+    .custom_display{
+        display: none !important;
+    }
+
+    .landing_bg{
+      background-image: url(../assets/Landing_image6.svg);background-size: 100%;background-repeat: no-repeat;background-attachment: fixed;
+    }
+
+ 
+}
+
+body {
+    font-family: "Dancing Script", cursive !important;
+}
+
+
+
+.navbar.scrolled {
+    /* background-color: whitesmoke !important; */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.678), rgba(255, 255, 255, 0.705));
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 3 2px 28px 0 rgba(255, 255, 255, 0.09) !important;
+    animation: 800ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgb(255 255 255) !important;
+}
+
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0,-100%,0);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Dancing+Script:wght@400..700&display=swap');
+
+
+.font_custom {
+  font-family: "Dancing Script", cursive;
+line-height: 3rem;
+
+}
+
+
+
+/* CSS */
+.btn-custom {
+  background-color: #ff6101ab;
+  border: 0 solid #E5E7EB;
+  color: #000000;
+  /* font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+  /* font-size: 1rem;
+  font-weight: 700; */
+  cursor: pointer;
+  transform: rotate(-2deg);
+}
+
+/* .btn-custom:focus {
+  outline: 0;
+} */
+
+.btn-custom:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.btn-custom:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+  .slider_section .carousel-indicators {
+    position: unset;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .slider_section .carousel-indicators li {
+    background-color: #1b1b1b;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    opacity: 1;
+    margin: 10px 5px;
+    list-style: none;
+
+  }
+  
+  .slider_section .carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+    background-color: #fd660b;
+  }
+
+
+  .glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .custom_animation{
+    animation-name: my-animation;
+  animation-duration: 8s;
+  }
+
+   .custom_animation1{
+    animation-name: my-animation;
+  animation-duration: 3s;
+  }
+
+  
+@keyframes my-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Gallery */
+
+
+/* .card-img-top{
+  transition: all .5s;
+} */
+
+/* .card-img-top:hover{
+  transform: scaleX(1.4) rotate(6deg);
+} */
+
+.card{
+  overflow: hidden;
+  border-color: #fd660b !important;
+  background-color: #e0e7f7 !important;
+}
