@@ -4,3 +4,4 @@ const users = [
     { "name": "Alice", "age": 30, "city": "Los Angeles" },
     { "name": "Bob", "age": 22, "city": "Chicago" }
 ];
+

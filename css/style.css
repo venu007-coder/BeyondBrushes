@@ -31,12 +31,16 @@
  
 }
 
-
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 body {
      font-family: "Satisfy", cursive !important;
     line-height: 3rem !important;
 
+} */
+
+body{
+     font-family: "Dancing Script", cursive !important;
 }
 
 
@@ -65,8 +69,8 @@ body {
 
 
 .font_custom {
-  font-family: "Dancing Script", cursive;
-line-height: 3rem;
+  font-family: "Dancing Script", cursive !important;
+line-height: 3rem !important;
 
 }
 
@@ -176,3 +180,25 @@ line-height: 3rem;
   border-color: #fd660b !important;
   background-color: #e0e7f7 !important;
 }
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background-color: #f0c2a3;
+}
+
+.hover-card .hover-image {
+  transition: transform 0.3s ease;
+}
+
+.hover-card:hover .hover-image {
+  transform: scale(1.05) rotate(1deg);
+  filter: brightness(1.1) saturate(1.1);
+  
+}
+
