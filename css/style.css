@@ -15,6 +15,10 @@
       background: url(../assets/Landing_bg_mobile.svg) !important;background-size: 100% !important;background-repeat: no-repeat !important;
     }
 
+    .bg-custom-color{
+      background-color: #fff;
+    }
+
    
 }
 
@@ -201,4 +205,91 @@ line-height: 3rem !important;
   filter: brightness(1.1) saturate(1.1);
   
 }
+
+
+  
+.swiper-container-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.swiper {
+  position: relative;
+  padding: 30px 60px;
+  overflow: visible;
+}
+
+.swiper-slide {
+  background: transparent !important;
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  color: #fd660b;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.swiper-button-prev {
+  left: -60px;
+}
+
+.swiper-button-next {
+  right: -60px;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    left: -30px;
+  }
+
+  .swiper-button-next {
+    right: -30px;
+  }
+}
+
+
+
+
+
+
+.dodecagon-cardss {
+  width: 100%;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    50% 0%,
+    75% 6.7%,
+    93.3% 25%,
+    100% 50%,
+    93.3% 75%,
+    75% 93.3%,
+    50% 100%,
+    25% 93.3%,
+    6.7% 75%,
+    0% 50%,
+    6.7% 25%,
+    25% 6.7%
+  );
+  overflow: hidden;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.dodecagon-cardss img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 

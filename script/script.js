@@ -103,3 +103,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// collection page products
+        const images = [
+            { src: "assets/product-1.jpg", alt: "IMG1", link: "#IMG1" },
+            { src: "assets/product-2.jpg", alt: "IMG2", link: "#IMG2" },
+            { src: "assets/product-3.jpg", alt: "IMG3", link: "#IMG3" },
+            { src: "assets/product-4.jpg", alt: "IMG4", link: "#IMG4" },
+            { src: "assets/product-5.jpg", alt: "IMG5", link: "#IMG5" },
+        ];
+
+        let selectedIndex = 3;
+        let slideElements = [];
+        
+        function getClassName(index) {
+            const relativeIndex = (index - selectedIndex + images.length) % images.length;
+            if (relativeIndex === 0) return "selected";
+            if (relativeIndex === 1) return "next";
+            if (relativeIndex === 2) return "nextRightSecond";
+            if (relativeIndex === images.length - 1) return "prev";
+            if (relativeIndex === images.length - 2) return "prevLeftSecond";
+            return relativeIndex > 2 ? "hideRight" : "hideLeft";
+        }
+
+        function createCarousel() {
+            const carousel = document.getElementById('carousel');
+            carousel.innerHTML = '';
+            
+            images.forEach((image, index) => {
+                const div = document.createElement('div');
+                div.className = getClassName(index);
+                
+                div.innerHTML = `
+                    <div class="img-wrap">
+                        <span class="img-text">${image.alt}</span>
+                        <img src="${image.src}" alt="${image.alt}">
+                    </div>
+                `;
+                
+                carousel.appendChild(div);
+                slideElements.push(div);
+            });
+        }
+
+        function moveToSelected(direction) {
+            if (direction === "next") {
+                selectedIndex = (selectedIndex + 1) % images.length;
+            } else if (direction === "prev") {
+                selectedIndex = selectedIndex === 0 ? images.length - 1 : selectedIndex - 1;
+            }
+            
+            // Update classes for smooth transition
+            slideElements.forEach((element, index) => {
+                element.className = getClassName(index);
+            });
+        }
+
+        // Initial creation
+        createCarousel();
