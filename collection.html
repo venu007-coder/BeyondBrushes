@@ -37,10 +37,10 @@
                 <i class="fa-solid fa-bars text-dark"></i>
             </button>
             <a class="navbar-brand mt-0 mb-0 pb-0 pt-0" href="index.html">
-                <img src="assets/Logo-2.svg" width="50%">
+                <img src="assets/Logo-2.svg" width="90%">
             </a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup"
-                style="font-size: 14px;font-weight: 600;">
+                style="font-size: 22px;font-weight: 600;">
                 <div class="navbar-nav navbar-list">
                     <a class="nav-item nav-link ms-4 me-4 font-color-default mx-3" href="index.html">Home</a>
                     <a class="nav-item nav-link ms-4 me-4 font-color-default mx-3" href="about.html">About Us</a>
@@ -53,7 +53,7 @@
 
             <div class="">
                 <button class="btn btn-dark rounded-pill custom_display_mobile"
-                    style="font-size: 11px; background:#ff6101ab; color: #302222;font-weight: 600;"
+                    style="font-size: 16px; background:#ff6101ab; color: #302222;font-weight: 600;"
                     onclick="window.location.href='index.html#contact'">
                     CONTACT US
                 </button>
@@ -61,7 +61,7 @@
         </div>
 
     </nav>
-    <div style="padding-top: 0px;padding-bottom: 50px;background-color: #fffefe;margin-top: 50px;">
+    <div style="padding-top: 10px;padding-bottom: 50px;background-color: #fffefe;margin-top: 75px;">
         <div class="container">
             <h3 class="mb-3 font_custom mt-4 text-center"
                 style="line-height: 2.5;font-weight: 500;font-size: 40px;color: #fd660b; margin-bottom: 10px;">
@@ -234,6 +234,7 @@
       style="line-height: 2;font-weight: 300;font-size: 30px;color: #fd660b;">
       Products
     </h3>
+    <p class="text-center">Click the image to view the product</p>
 </div>
 <div class ="container">
     <div class="row justify-content-center">
@@ -416,12 +417,11 @@
 
   
      </section>
- <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper(".mySwiper", {
     loop: true,
     loopAdditionalSlides: 1,
-    loopedSlides: 30,
     slidesPerView: 3,
     spaceBetween: 30,
     autoplay: {
@@ -440,23 +440,46 @@ document.addEventListener("DOMContentLoaded", function () {
     watchSlidesProgress: true
   });
 
-  let autoplayTimeout;
-
-  const stopAndRestartAutoplay = () => {
-    swiper.autoplay.stop();
-    clearTimeout(autoplayTimeout);
-    autoplayTimeout = setTimeout(() => {
-      swiper.autoplay.start();
-    }, 7000); // Restart after 5 seconds
-  };
-
   const slides = document.querySelectorAll('.swiper-slide');
+  let modalInstance = null;
+  let modalTimeout;
+
   slides.forEach(slide => {
-    slide.addEventListener('mouseenter', stopAndRestartAutoplay);
-    slide.addEventListener('click', stopAndRestartAutoplay);
+    const img = slide.querySelector('img');
+    slide.addEventListener('click', () => {
+      openProductModal(img.src, img.alt);
+    });
+  });
+
+  function openProductModal(src, alt) {
+    const modalImage = document.getElementById('modalProductImage');
+    modalImage.src = src;
+    modalImage.alt = alt;
+
+    swiper.autoplay.stop();
+
+    const modalElement = document.getElementById('productModal');
+    modalInstance = new bootstrap.Modal(modalElement);
+    modalInstance.show();
+
+    clearTimeout(modalTimeout);
+    modalTimeout = setTimeout(() => {
+      modalInstance.hide();
+      swiper.autoplay.start(); // ✅ resume autoplay immediately after modal closes
+    }, 6000);
+  }
+
+  // Also resume autoplay in case modal is closed manually
+  document.getElementById('productModal').addEventListener('hidden.bs.modal', () => {
+    swiper.autoplay.start();
   });
 });
 </script>
+
+
+
+
+
 
 
 
@@ -535,6 +558,19 @@ document.addEventListener("DOMContentLoaded", function () {
     </footer>
     <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Product Modal -->
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0 text-center">
+        <img id="modalProductImage" src="" alt="Product" class="img-fluid rounded">
+        <!-- <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </body>
 
