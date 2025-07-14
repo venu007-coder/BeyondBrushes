@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Brushes</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" /> -->
+    <script src="script/script.js"></script>
+    <script type="text/javascript" src="script/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="script/bootstrap.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top bg-custom-color" style="z-index: 1000000;   ">
+        <div class="container " style="background-color: #00000000;">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon  "></span> -->
+                <i class="fa-solid fa-bars text-dark"></i>
+            </button>
+            <a class="navbar-brand mt-0 mb-0 pb-0 pt-0" href="index.html">
+                <img src="assets/Logo-2.svg" width="90%">
+            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup"
+                style="font-size: 22px;font-weight: 600;">
+                <div class="navbar-nav navbar-list">
+                    <a class="nav-item nav-link ms-4 me-4 font-color-default mx-3" href="index.html">Home</a>
+                    <a class="nav-item nav-link ms-4 me-4 font-color-default mx-3" href="about.html">About Us</a>
+                    <a class="nav-item nav-link ms-4 me-4 font-color-default mx-3" href="collection.html">Gallery</a>
+                    <a class="nav-item nav-link ms-4 me-4 font-color-default mx-3" href="product.html">Products</a>
+                    <a class="nav-item nav-link ms-4 me-4 mx-3 font-color-default custom_display"
+                        onclick="window.location.href='index.html#contact'">Contact Us</a>
+                </div>
+            </div>
+
+
+            <div class="">
+                <button class="btn btn-dark rounded-pill custom_display_mobile"
+                    style="font-size: 16px; background:#ff6101ab; color: #302222;font-weight: 600;"
+                    onclick="window.location.href='index.html#contact'">
+                    CONTACT US
+                </button>
+            </div>
+        </div>
+
+    </nav>
+    <!-- carusol -->
+    <section style="margin-top: 100px;margin-bottom: 80px;">
+        <div class="container">
+            <h3 class="mb-3 font_custom mt-4 text-center"
+                style="line-height: 2;font-weight: 300;font-size: 30px;color: #fd660b;">
+                Products
+            </h3>
+            <p class="text-center">Tap the image to explore this product</p>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-1 d-none d-md-block">
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="col-12 col-md-10">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper mt-4">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-1.jpg" alt="Product 1">
+
+                                </div>
+                                <div class="product-price mt-2 pr">Framed Coaster</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-2.jpg" alt="Product 2">
+                                </div>
+                                <div class="product-price mt-2 pr">Fridge Magnet</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-3.jpeg" alt="Product 3">
+                                </div>
+                                <div class="product-price mt-2 pr">ShubhLabh</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-4.jpg" alt="Product 4">
+                                </div>
+                                <div class="product-price mt-2 pr">Photo Frame Magnets</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-5.jpg" alt="Product 5">
+                                </div>
+                                <div class="product-price mt-2 pr">Fridge Magnet</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class=" dodecagon-cardss">
+                                    <img src="assets/product-6.jpg" alt="Product 6">
+                                </div>
+                                <div class="product-price mt-2 pr">Key Holders</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-7.jpg" alt="Product 7">
+                                </div>
+                                <div class="product-price mt-2 pr">ShubhLabh</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-8.jpeg" alt="Product 8">
+                                </div>
+                                <div class="product-price mt-2 pr">Door Hangings</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-9.jpg" alt="Product 9">
+                                </div>
+                                <div class="product-price mt-2 pr">Mouse Pads</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-10.jpg" alt="Product 10">
+                                </div>
+                                <div class="product-price mt-2 pr">Fridge Magnet</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-11.jpeg" alt="Product 11">
+                                </div>
+                                <div class="product-price mt-2 pr">Fridge Magnet</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-12.jpg" alt="Product 12">
+                                </div>
+                                <div class="product-price mt-2 pr">Tea Costers</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-13.jpg" alt="Product 13">
+                                </div>
+                                <div class="product-price mt-2 pr">Adult Sling Bags</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-14.jpg" alt="Product 14">
+                                </div>
+                                <div class="product-price mt-2 pr">Photo Frame Magnets</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-15.jpg" alt="Product 15">
+                                </div>
+                                <div class="product-price mt-2 pr">Tea Costers</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-16.jpg" alt="Product 16">
+                                </div>
+                                <div class="product-price mt-2 pr">Tea Costers</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-17.jpg" alt="Product 17">
+                                </div>
+                                <div class="product-price mt-2 pr">Key Holders</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-18.jpg" alt="Product 18">
+                                </div>
+                                <div class="product-price mt-2 pr">Tea Costers</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-19.jpg" alt="Product 19">
+                                </div>
+                                <div class="product-price mt-2 pr">Terra- Sips- Kullad Cup</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-20.jpeg" alt="Product 20">
+                                </div>
+                                <div class="product-price mt-2 pr">ShubhLabh</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-21.jpeg" alt="Product 21">
+                                </div>
+                                <div class="product-price mt-2 pr">Hand Painted Tray</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-22.jpg" alt="Product 22">
+                                </div>
+                                <div class="product-price mt-2 pr">Photo Frame Magnets</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-23.jpg" alt="Product 23">
+                                </div>
+                                <div class="product-price mt-2 pr">Hand Painted Tray- Big</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-24.jpg" alt="Product 24">
+                                </div>
+                                <div class="product-price mt-2 pr">Door Magnets</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-25.jpg" alt="Product 25">
+                                </div>
+                                <div class="product-price mt-2 pr">Tea Costers</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-26.jpg" alt="Product 26">
+                                </div>
+                                <div class="product-price mt-2 pr">Flodable Notepad</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-27.jpg" alt="Product 27">
+                                </div>
+                                <div class="product-price mt-2 pr">Tea Costers</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-28.jpg" alt="Product 28">
+                                </div>
+                                <div class="product-price mt-2 pr">magnets with Danglings/bells</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-29.jpg" alt="Product 29">
+                                </div>
+                                <div class="product-price mt-2 pr">Photo Frame Magnets</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="dodecagon-cardss">
+                                    <img src="assets/product-30.jpg" alt="Product 30">
+                                </div>
+                                <div class="product-price mt-2 pr">Fridge Magnet</div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+                <div class="col-1 d-none d-md-block">
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".mySwiper", {
+                loop: true,
+                loopAdditionalSlides: 1,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                },
+                grabCursor: true,
+                watchSlidesProgress: true
+            });
+
+            const slides = document.querySelectorAll('.swiper-slide');
+            let modalInstance = null;
+            let modalTimeout;
+
+            slides.forEach(slide => {
+                const img = slide.querySelector('img');
+                slide.addEventListener('click', () => {
+                    const price = slide.querySelector('.product-price')?.textContent.trim() || '';
+                    openProductModal(img.src, img.alt, price);
+                });
+
+            });
+
+            function openProductModal(src, alt, price) {
+                const modalImage = document.getElementById('modalProductImage');
+                const modalPrice = document.getElementById('modalProductPrice');
+                modalImage.src = src;
+                modalImage.alt = alt;
+                modalPrice.textContent = price;
+
+                swiper.autoplay.stop();
+
+                const modalElement = document.getElementById('productModal');
+                modalInstance = new bootstrap.Modal(modalElement);
+                modalInstance.show();
+
+                clearTimeout(modalTimeout);
+                modalTimeout = setTimeout(() => {
+                    modalInstance.hide();
+                    swiper.autoplay.start(); // resume autoplay immediately after modal closes
+                }, 6000);
+            }
+
+            // Also resume autoplay in case modal is closed manually
+            document.getElementById('productModal').addEventListener('hidden.bs.modal', () => {
+                swiper.autoplay.start();
+            });
+        });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Product Modal -->
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center">
+                    <img id="modalProductImage" src="" alt="Product" class="img-fluid rounded">
+                    <div id="modalProductPrice" class="fw-bold mt-3 fs-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="assets/FB2.svg" width="100%">
+
+    <footer class="footer pt-5 pb-3 custom-font text-white" style="background-color: #1e3148;border: none;">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-9">
+
+                </div>
+                <div class="col-lg-3 d-flex align-items-center justify-content-center">
+                    <ul style="list-style: none;" class="d-flex mb-0">
+                        <li class="m-2 me-4 mb-0 ">
+                            <a href="https://www.instagram.com/beyondbrushesbyaa?igsh=MWRsMmt3dHEzeTF6Zg=="
+                                target="_blank"><i class="fa-brands fa-instagram fs-custom "
+                                    style="font-size: 30px;color:#E1306C;"></i></a>
+                        </li>
+                        <li class="m-2  me-4 mb-0">
+                            <a href="https://www.facebook.com/BeyondBrushesbyAA" target="_blank"><i
+                                    class="fa-brands fa-facebook fs-custom "
+                                    style="font-size: 30px;color: #1877F2 ;"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <h1 class="font_custom1 mb-5" style="font-size: 66px;">
+                Every artwork tells a story <br> beyond creativity.
+            </h1>
+
+            <div class="row">
+                <div class="col-lg-5">
+                    <h3 class="font_custom1 ">Beyond Brushes</h3>
+                    <p class="custom-font">Our mission is to design expressive art tools and products that spark
+                        inspiration while championing sustainability. Ideal for eco-conscious manufacturers, our
+                        offerings add a unique artistic edge to any product line.
+                    </p>
+
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="font_custom1">
+                        Contact Us
+                    </h3>
+
+                    <p class="mt-2"><i class="fa-solid fa-phone"></i> &nbsp;+91 9840703069/+91 8169683454.</p>
+                    <p class="mt-2"><i class="fa-solid fa-envelope"></i> &nbsp;beyondbrushesbyaa@gmail.com</p>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="font_custom1">
+                        Address
+                    </h3>
+
+                    <p class="mt-2">Site: No.3, 1st street, Sree Abirami Gardens, Somayapalayam, Coimbatore - 641108</p>
+
+
+                </div>
+            </div>
+            <hr class="">
+            <div class="row fw-semibold">
+                <div class="col-lg-6">
+                    <p> @ 2025 Beyond Brushes</p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-end"><u><a>Terms & Condition</a></u> | <u><a>Privacy Policy </a></u>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
