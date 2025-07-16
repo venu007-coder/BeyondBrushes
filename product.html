@@ -26,6 +26,56 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+      <style>
+        .phone-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #25d366, 0 0 10px #25d366, 0 0 15px #25d366;
+  }
+  50% {
+    box-shadow: 0 0 20px #25d366, 0 0 30px #25d366, 0 0 40px #25d366;
+  }
+  100% {
+    box-shadow: 0 0 5px #25d366, 0 0 10px #25d366, 0 0 15px #25d366;
+  }
+}
+
+
+.btn3{
+  align-items: center;
+  background-color: #21e669 !important;
+  color: #f0f0f0 !important;
+  margin-top: 10px;
+  margin-bottom: 10xp;
+  border-radius: 50px !important;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  /* // background-color: #25d366;
+  // color: rgb(117, 252, 83);
+  // border-radius: 50%;
+  // padding: 20px; */
+  font-size: 44px;
+  /* // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+    </style>
+
 </head>
 
 <body>
@@ -431,7 +481,58 @@
             </div>
         </div>
     </footer>
+     <div>
+        <button class="phone-glow btn btn3 whatsapp-float" data-bs-toggle="modal" data-bs-target="#whatsappModal" aria-label="Chat on WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </button>
+      </div>
 
+    <div id="whatsappModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered animate-slide-down">
+    <div class="modal-content">
+      <!-- Modal Header with Close Button -->
+      <div class="modal-header" style="background-color: rgb(138, 250, 128);">
+        <h5 class="modal-title">Now you can Order Your Products on WhatsApp – It’s That Easy!</h5>
+        <button type="button " class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body " style="text-align: start !important;">
+          <div class="row">
+            <!-- Left Column -->
+            <div class="col-lg-7 text-start">
+              <h5 class="text-success" >Simple. Fast. Delicious</h5>
+
+              <ul>
+                <li class="mt-3">Just click the <span class="text-success">"Order Now"</span> button and message us on WhatsApp!</li>
+                <li class="mt-2">Browse the menu instantly</li>
+                <li class="mt-2">Place your order in a few taps</li>
+                <li class="mt-2">Get it delivered to your doorstep!</li>
+              </ul>
+
+            </div>
+
+
+            <!-- Right Column (Image) -->
+            <div class="col-lg-5  justify-content-center align-items-center text-center">
+                <div class=" mt-2">
+                                  <img src="assets/Logo-2.svg" class="text-center" alt="WhatsApp Ordering System" style="width:70%; border-radius: 10px;">
+                                  <br>
+                      <a href="https://wa.me/c/916379453442" target="_blank" style="align-items: center;">
+                           <button class="btn-custom btn-lg" role="button" style="background-color: #8afa80;">
+                           <i class="fa-brands fa-whatsapp"></i> &nbsp; Order Now
+                        </button>
+                      </a>
+
+                    </div>
+                </div>
+          </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
 
 </body>
 
